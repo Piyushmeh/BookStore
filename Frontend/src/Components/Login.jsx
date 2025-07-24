@@ -13,7 +13,7 @@ const Login = () => {
     e.preventDefault();
     try {
       console.log('Logging in with:', email, password);
-      const res = await axios.post(${backendUrl}/user/login, { email, password });
+      const res = await axios.post(`${backendUrl}/user/login`, { email, password });
       localStorage.setItem("Users",JSON.stringify(res.data.user));
       toast.success("login success");
       document.getElementById("my_modal_3").close();

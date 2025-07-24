@@ -16,7 +16,7 @@ const Signup = () => {
       const data = { email, fullname, password };
       console.log(email, fullname, password);
 
-      const res = await axios.post(${backendUrl}/user/signup, data);
+      const res = await axios.post(`${backendUrl}/user/signup`, data);
       localStorage.setItem("Users", JSON.stringify(res.data.user));
       toast.success("Signed up successfully");
     } catch (err) {

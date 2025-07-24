@@ -12,7 +12,7 @@ const Course = () => {
   useEffect(()=>{
     const getbook=async()=>{
       try{
-        const res=await axios.get(${backendUrl}/book);
+        const res=await axios.get(`${backendUrl}/book`);
         setBook(res.data);
         console.log(res);
       }
